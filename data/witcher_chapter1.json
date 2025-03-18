@@ -1,0 +1,180 @@
+{
+    "nodes": [
+        {
+            "id": "start",
+            "content": "你醒来发现自己在一个陌生的房间里。房间里有一张床、一张桌子和一把椅子。桌子上放着一封信。",
+            "choices": [
+                {
+                    "text": "查看信件",
+                    "next_node": "read_letter"
+                },
+                {
+                    "text": "检查房间",
+                    "next_node": "check_room"
+                }
+            ]
+        },
+        {
+            "id": "read_letter",
+            "content": "信件上写着：'亲爱的杰洛特，如果你看到这封信，说明你已经安全到达了。请尽快前往白果园村，那里有重要的事情等着你。叶奈法'",
+            "choices": [
+                {
+                    "text": "立即出发",
+                    "next_node": "leave_room"
+                },
+                {
+                    "text": "继续检查房间",
+                    "next_node": "check_room"
+                }
+            ]
+        },
+        {
+            "id": "check_room",
+            "content": "在仔细检查房间后，你发现了一些有用的物品：一把银剑、一些金币和一张地图。墙上挂着一幅卡尔·莫罗海恩的肖像。",
+            "choices": [
+                {
+                    "text": "拿起物品",
+                    "next_node": "take_items"
+                },
+                {
+                    "text": "查看信件",
+                    "next_node": "read_letter"
+                },
+                {
+                    "text": "观察肖像",
+                    "next_node": "look_at_portrait"
+                }
+            ]
+        },
+        {
+            "id": "look_at_portrait",
+            "content": "这是尼弗迦德皇帝恩希尔·恩瑞斯的肖像。你想起他曾经悬赏寻找自己的养女希里。",
+            "choices": [
+                {
+                    "text": "拿起物品",
+                    "next_node": "take_items"
+                },
+                {
+                    "text": "查看信件",
+                    "next_node": "read_letter"
+                }
+            ]
+        },
+        {
+            "id": "take_items",
+            "content": "你拿起了银剑、金币和地图。现在你准备离开房间。",
+            "choices": [
+                {
+                    "text": "离开房间",
+                    "next_node": "leave_room"
+                }
+            ]
+        },
+        {
+            "id": "leave_room",
+            "content": "你离开了房间，发现自己在一个小旅馆里。楼下传来喧闹声。旅馆窗外可以看到一片树林。",
+            "choices": [
+                {
+                    "text": "下楼查看",
+                    "next_node": "downstairs"
+                },
+                {
+                    "text": "从窗户观察",
+                    "next_node": "window"
+                }
+            ]
+        },
+        {
+            "id": "window",
+            "content": "从窗户看出去，你能看到一片茂密的树林，远处有一条小路通向村庄。你注意到树林边缘有几个人影鬼鬼祟祟。",
+            "choices": [
+                {
+                    "text": "下楼查看",
+                    "next_node": "downstairs"
+                },
+                {
+                    "text": "从窗户观察可疑人影",
+                    "next_node": "observe_figures"
+                }
+            ]
+        },
+        {
+            "id": "observe_figures",
+            "content": "你仔细观察那些人影，发现他们穿着尼弗迦德军队的制服。看起来像是一支巡逻队。",
+            "choices": [
+                {
+                    "text": "下楼查看",
+                    "next_node": "downstairs"
+                },
+                {
+                    "text": "从后门离开旅馆",
+                    "next_node": "back_door"
+                }
+            ]
+        },
+        {
+            "id": "back_door",
+            "content": "你决定从后门离开旅馆，避开尼弗迦德士兵。你悄悄地下楼，从厨房找到一扇后门。",
+            "choices": [
+                {
+                    "text": "偷偷溜出去",
+                    "next_node": "sneak_out"
+                },
+                {
+                    "text": "改变主意，从正门离开",
+                    "next_node": "downstairs"
+                }
+            ]
+        },
+        {
+            "id": "sneak_out",
+            "content": "你成功地从后门溜了出去，避开了尼弗迦德的巡逻队。现在你站在旅馆后面的小巷里。",
+            "choices": [
+                {
+                    "text": "前往白果园村",
+                    "next_node": "to_white_orchard"
+                },
+                {
+                    "text": "探索周围环境",
+                    "next_node": "explore_surroundings"
+                }
+            ]
+        },
+        {
+            "id": "downstairs",
+            "content": "你下楼来到旅馆的大厅。这里挤满了人，有当地村民，也有旅行者。角落里有几个人在打牌，吧台后站着一位中年女性，正在擦拭杯子。",
+            "choices": [
+                {
+                    "text": "和酒馆老板娘交谈",
+                    "next_node": "talk_to_innkeeper"
+                },
+                {
+                    "text": "加入打牌的人",
+                    "next_node": "join_card_game"
+                },
+                {
+                    "text": "离开旅馆",
+                    "next_node": "leave_inn"
+                }
+            ]
+        },
+        {
+            "id": "talk_to_innkeeper",
+            "content": "你走向吧台，酒馆老板娘向你点头示意。'有什么需要的吗，猎魔人先生？'她问道。",
+            "choices": [
+                {
+                    "text": "询问白果园村的方向",
+                    "next_node": "ask_directions"
+                },
+                {
+                    "text": "询问最近有什么怪物出没",
+                    "next_node": "ask_about_monsters"
+                },
+                {
+                    "text": "询问叶奈法",
+                    "next_node": "ask_about_yennefer"
+                }
+            ]
+        }
+    ]
+} 
